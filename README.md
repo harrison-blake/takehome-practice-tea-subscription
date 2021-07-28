@@ -1,24 +1,95 @@
-# README
+# Tea Subscriptions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+- todo
 
-Things you may want to cover:
+## Versions
 
-* Ruby version
+- Rails 5.2.5
+- Ruby 2.5.3
+- Bundler 2.1.4
 
-* System dependencies
+## Database Schema
+- todo
 
-* Configuration
+## API Endpoint Examples
 
-* Database creation
+#### Create Customer Tea Subscription
 
-* Database initialization
+Endpoint: http://localhost:3000/api/v1/subscriptions
 
-* How to run the test suite
+Verb: POST
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+Body: {
+         "customer_id": 23,
+         "subscription_id": 9
+      }
+```
 
-* Deployment instructions
+Sample Data Returned:
 
-* ...
+```
+{
+    "data": {
+        "id": "4",
+        "type": "subscription",
+        "attributes": {
+            "id": 4,
+            "title": "Summer Mellow",
+            "price": 4.99,
+            "status": "true",
+            "teas": [
+                {
+                    "id": 5,
+                    "title": "Green Tea",
+                    "description": "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.",
+                    "brew_time": 10.3,
+                    "subscription_id": 4
+                },
+                {
+                    "id": 6,
+                    "title": "Mint Tea",
+                    "description": "Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.",
+                    "brew_time": 10.3,
+                    "subscription_id": 4
+                }
+            ]
+        }
+    }
+}
+```
+
+#### Get Customer Information
+
+Endpoint: http://localhost:3000/api/v1/customers/:id
+
+Verb: GET
+
+Sample Data Returned:
+
+```
+{
+    "data": {
+        "id": "4",
+        "type": "customer",
+        "attributes": {
+            "id": 4,
+            "first_name": "Harrison",
+            "last_name": "Blake",
+            "email": "test",
+            "subscriptions": [
+                {
+                    "id": 4,
+                    "title": "Summer Mellow",
+                    "price": 4.99,
+                    "created_at": "2021-07-28T12:23:14.575Z",
+                    "updated_at": "2021-07-28T12:27:40.196Z",
+                    "customer_id": 4,
+                    "status": "true"
+                }
+            ]
+        }
+    }
+}
+```
