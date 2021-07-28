@@ -10,7 +10,7 @@
 - Bundler 2.1.4
 
 ## Database Schema
-- todo
+<img width="1137" alt="Screen Shot 2021-07-28 at 9 50 00 AM" src="https://user-images.githubusercontent.com/72946334/127354728-52b70cfb-ced1-41a9-bcfa-3b0313ee2294.png">
 
 ## API Endpoint Examples
 
