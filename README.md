@@ -139,3 +139,8 @@ Sample Data Returned:
     }
 }
 ```
+
+## Test Coverage
+
+![Screen Shot 2021-07-28 at 10 22 04 AM](https://user-images.githubusercontent.com/72946334/127359744-20bbc4cd-6cc6-4741-a29e-2081c582077a.png)
+
