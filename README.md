@@ -1,6 +1,14 @@
 
 # Tea Subscriptions
 
+## Technologies
+
+- Language: Ruby <img alt="Ruby" src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"/>
+- Framework: Rails <img alt="Rails" src="https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"/>
+- Testing: RSpec
+- Response Caching: VCR & Webmock
+- Test Coverage: SimpleCov
+
 ## Versions
 
 - Rails 5.2.5
