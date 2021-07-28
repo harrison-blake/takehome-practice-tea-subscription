@@ -14,16 +14,16 @@
 
 ## API Endpoint Examples
 
-#### Create Customer Tea Subscription
+#### Subscribe Customer
 
-Endpoint: http://localhost:3000/api/v1/subscriptions
+Endpoint: http://localhost:3000/api/v1/customers
 
 Verb: POST
 
 ```
 Body: {
-         "customer_id": 23,
-         "subscription_id": 9
+         "customer_id": 4,
+         "subscription_id": 4
       }
 ```
 
@@ -33,26 +33,53 @@ Sample Data Returned:
 {
     "data": {
         "id": "4",
-        "type": "subscription",
+        "type": "customer",
         "attributes": {
             "id": 4,
-            "title": "Summer Mellow",
-            "price": 4.99,
-            "status": "true",
-            "teas": [
+            "first_name": "Harrison",
+            "last_name": "Blake",
+            "email": "test",
+            "subscriptions": [
                 {
-                    "id": 5,
-                    "title": "Green Tea",
-                    "description": "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.",
-                    "brew_time": 10.3,
-                    "subscription_id": 4
-                },
+                    "status": "true",
+                    "customer_id": 4,
+                    "id": 4,
+                    "title": "Summer Mellow",
+                    "price": 4.99,
+                    "created_at": "2021-07-28T12:23:14.575Z",
+                    "updated_at": "2021-07-28T14:43:41.356Z"
+                }
+            ]
+        }
+    }
+}
+```
+
+#### Unsubscribe Customer
+
+Endpoint: http://localhost:3000/api/v1/customers
+
+Verb: PUT
+
+```
+{
+    "data": {
+        "id": "4",
+        "type": "customer",
+        "attributes": {
+            "id": 4,
+            "first_name": "Harrison",
+            "last_name": "Blake",
+            "email": "test",
+            "subscriptions": [
                 {
-                    "id": 6,
-                    "title": "Mint Tea",
-                    "description": "Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.",
-                    "brew_time": 10.3,
-                    "subscription_id": 4
+                    "id": 4,
+                    "title": "Summer Mellow",
+                    "price": 4.99,
+                    "created_at": "2021-07-28T12:23:14.575Z",
+                    "updated_at": "2021-07-28T14:47:01.179Z",
+                    "customer_id": 4,
+                    "status": "false"
                 }
             ]
         }
@@ -71,22 +98,31 @@ Sample Data Returned:
 ```
 {
     "data": {
-        "id": "4",
+        "id": "1",
         "type": "customer",
         "attributes": {
-            "id": 4,
+            "id": 1,
             "first_name": "Harrison",
             "last_name": "Blake",
             "email": "test",
             "subscriptions": [
                 {
-                    "id": 4,
+                    "id": 2,
+                    "title": "Winter Warmth",
+                    "price": 5.99,
+                    "created_at": "2021-07-28T14:51:59.886Z",
+                    "updated_at": "2021-07-28T14:51:59.893Z",
+                    "customer_id": 1,
+                    "status": "true"
+                },
+                {
+                    "id": 1,
                     "title": "Summer Mellow",
                     "price": 4.99,
-                    "created_at": "2021-07-28T12:23:14.575Z",
-                    "updated_at": "2021-07-28T12:27:40.196Z",
-                    "customer_id": 4,
-                    "status": "true"
+                    "created_at": "2021-07-28T14:51:59.855Z",
+                    "updated_at": "2021-07-28T14:52:57.873Z",
+                    "customer_id": 1,
+                    "status": "false"
                 }
             ]
         }
