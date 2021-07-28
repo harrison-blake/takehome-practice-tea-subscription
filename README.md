@@ -17,6 +17,7 @@
 #### Create Customer Tea Subscription
 
 Endpoint: http://localhost:3000/api/v1/subscriptions
+
 Verb: POST
 
 ```
@@ -26,7 +27,7 @@ Body: {
       }
 ```
 
-Sample Data Returned
+Sample Data Returned:
 
 ```
 {
@@ -52,6 +53,40 @@ Sample Data Returned
                     "description": "Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.",
                     "brew_time": 10.3,
                     "subscription_id": 4
+                }
+            ]
+        }
+    }
+}
+```
+
+#### Get Customer Information
+
+Endpoint: http://localhost:3000/api/v1/customers/:id
+
+Verb: GET
+
+Sample Data Returned:
+
+```
+{
+    "data": {
+        "id": "4",
+        "type": "customer",
+        "attributes": {
+            "id": 4,
+            "first_name": "Harrison",
+            "last_name": "Blake",
+            "email": "test",
+            "subscriptions": [
+                {
+                    "id": 4,
+                    "title": "Summer Mellow",
+                    "price": 4.99,
+                    "created_at": "2021-07-28T12:23:14.575Z",
+                    "updated_at": "2021-07-28T12:27:40.196Z",
+                    "customer_id": 4,
+                    "status": "true"
                 }
             ]
         }
