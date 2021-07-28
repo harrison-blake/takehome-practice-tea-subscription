@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Create Subscription Endpoint' do
+describe 'Create A Subscription Endpoint' do
   describe 'Happy Path' do
     before :each do
       @customer = Customer.create!(first_name: 'Harrison', last_name: 'Blake', email: 'test')

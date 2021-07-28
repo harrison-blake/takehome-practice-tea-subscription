@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/spec/requests/api/v1/show_customer_spec.rb": {
+      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/spec/requests/api/v1/customers/subscribe_customer_spec.rb": {
         "lines": [
           1,
           null,
@@ -16,15 +16,22 @@
           null,
           1,
           1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
           1,
           null,
           null,
           1,
           null,
           1,
-          null,
           1,
-          null,
+          1,
+          1,
           1,
           1,
           1,
@@ -370,8 +377,25 @@
         "lines": [
           1,
           1,
+          0,
+          0,
+          null,
+          null,
           1,
           1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -396,6 +420,6 @@
         ]
       }
     },
-    "timestamp": 1627479413
+    "timestamp": 1627483337
   }
 }

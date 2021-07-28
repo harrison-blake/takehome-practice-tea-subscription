@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-07-28T07:36:53-06:00">2021-07-28T07:36:53-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-07-28T08:42:17-06:00">2021-07-28T08:42:17-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.13%
+  92.68%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.99
+         0.93
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>107</b> relevant lines,
-    <span class="green"><b>105</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed. </span>
+    <b>123</b> relevant lines,
+    <span class="green"><b>114</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed. </span>
     (<span class="green">
-  98.13%
+  92.68%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2e97124b7d9c0d416af917cb11f32d41a3097887" class="src_link" title="app/controllers/api/v1/customers_controller.rb">app/controllers/api/v1/customers_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="red strong cell--number t-file__coverage">56.25 %</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">0.56</td>
             
           </tr>
         
@@ -291,11 +291,11 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#f772b7dc3b637665531e5429ea16caf65171be61" class="src_link" title="spec/requests/api/v1/show_customer_spec.rb">spec/requests/api/v1/show_customer_spec.rb</a></td>
+            <td class="strong t-file__name"><a href="#0c1d6061f66b069be68212fe33a2a9898bdbee77" class="src_link" title="spec/requests/api/v1/customers/subscribe_customer_spec.rb">spec/requests/api/v1/customers/subscribe_customer_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">36</td>
-            <td class="cell--number">25</td>
-            <td class="cell--number">25</td>
+            <td class="cell--number">43</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">29</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -322,8 +322,8 @@
   <div class="header">
     <h3>app/controllers/api/v1/customers_controller.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="red">
+  56.25%
 </span>
 
       lines covered
@@ -332,9 +332,9 @@
     
 
     <div class="t-line-summary">
-      <b>4</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>16</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
 
     
@@ -367,8 +367,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="3">
+            
             
 
             
@@ -378,8 +378,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="4">
+            
             
 
             
@@ -401,6 +401,193 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    sub = Subscription.find(params[:subscription_id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    sub.status = true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    customer = Customer.find(params[:customer_id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    customer.subscriptions &lt;&lt; sub</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    render json: CustomerSerializer.new(customer)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def update</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">    customer = Customer.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">    sub = customer.subscriptions.find(params[:subscription_id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">    sub.status = false</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">    sub.save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">    render json: CustomerSerializer.new(customer)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -3032,7 +3219,7 @@
 
             
 
-            <code class="ruby">      resources :subscriptions, only: [:create, :destroy]</code>
+            <code class="ruby">      resources :subscriptions, only: [:create]</code>
           </li>
         </div>
       
@@ -3043,7 +3230,7 @@
 
             
 
-            <code class="ruby">      resources :customers, only: [:show]</code>
+            <code class="ruby">      resources :customers, only: [:show, :create, :update]</code>
           </li>
         </div>
       
@@ -3952,9 +4139,9 @@
 </div>
 
       
-        <div class="source_table" id="f772b7dc3b637665531e5429ea16caf65171be61">
+        <div class="source_table" id="0c1d6061f66b069be68212fe33a2a9898bdbee77">
   <div class="header">
-    <h3>spec/requests/api/v1/show_customer_spec.rb</h3>
+    <h3>spec/requests/api/v1/customers/subscribe_customer_spec.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -3966,8 +4153,8 @@
     
 
     <div class="t-line-summary">
-      <b>25</b> relevant lines.
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>29</b> relevant lines.
+      <span class="green"><b>29</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -4007,7 +4194,7 @@
 
             
 
-            <code class="ruby">describe &#39;Show Customer Endpoint&#39; do</code>
+            <code class="ruby">describe &#39;Subscribe Customer Endpoint&#39; do</code>
           </li>
         </div>
       
@@ -4051,7 +4238,7 @@
 
             
 
-            <code class="ruby">      @customer.subscriptions.create!(title: &#39;Summer Mellow&#39;, price: 4.99, status: false)</code>
+            <code class="ruby">      @test_sub = Subscription.create!(title: &#39;Summer Mellow&#39;, price: 4.99, status: false)</code>
           </li>
         </div>
       
@@ -4062,7 +4249,7 @@
 
             
 
-            <code class="ruby">      @customer.subscriptions.first.teas.create!(title: &#39;Green Tea&#39;, description: &#39;Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.&#39;, brew_time: 10.30)</code>
+            <code class="ruby">      @test_sub.teas.create!(title: &#39;Green Tea&#39;, description: &#39;Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.&#39;, brew_time: 10.30)</code>
           </li>
         </div>
       
@@ -4073,7 +4260,7 @@
 
             
 
-            <code class="ruby">      @customer.subscriptions.first.teas.create!(title: &#39;Mint Tea&#39;, description: &#39;Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.&#39;, brew_time: 10.30)</code>
+            <code class="ruby">      @test_sub.teas.create!(title: &#39;Mint Tea&#39;, description: &#39;Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.&#39;, brew_time: 10.30)</code>
           </li>
         </div>
       
@@ -4106,7 +4293,7 @@
 
             
 
-            <code class="ruby">    it &quot;shows all customer&#39;s active and inactive subscriptions&quot; do</code>
+            <code class="ruby">    it &quot;subscribes a customer to a tea subscription&quot; do</code>
           </li>
         </div>
       
@@ -4117,18 +4304,18 @@
 
             
 
-            <code class="ruby">      VCR.use_cassette(&#39;add_users_roomie_requests&#39;) do</code>
+            <code class="ruby">      params = {</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">        get &quot;/api/v1/customers/#{@customer.id}&quot;</code>
+            <code class="ruby">                customer_id: @customer.id,</code>
           </li>
         </div>
       
@@ -4139,7 +4326,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">                subscription_id: @test_sub.id</code>
           </li>
         </div>
       
@@ -4150,23 +4337,34 @@
 
             
 
+            <code class="ruby">               }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="18">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      expect(response).to be_success</code>
+            <code class="ruby">      headers = {&quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot;}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -4177,24 +4375,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
+          <li class="covered" data-hits="1" data-linenumber="20">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      customer = JSON.parse(response.body, symbolize_names: true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby"></code>
+            <code class="ruby">      VCR.use_cassette(&#39;subscribe_customer&#39;) do</code>
           </li>
         </div>
       
@@ -4205,7 +4392,7 @@
 
             
 
-            <code class="ruby">      binding.pry</code>
+            <code class="ruby">        post &#39;/api/v1/customers&#39;, headers: headers, params: params.to_json</code>
           </li>
         </div>
       
@@ -4216,18 +4403,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="23">
+            
             
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:first_name)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4238,18 +4425,18 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:last_name)</code>
+            <code class="ruby">      customer = JSON.parse(response.body, symbolize_names: true)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="25">
+            
             
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:email)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4260,7 +4447,7 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:subscriptions)</code>
+            <code class="ruby">      expect(response).to be_success</code>
           </li>
         </div>
       
@@ -4271,7 +4458,7 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:title)</code>
+            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:first_name)</code>
           </li>
         </div>
       
@@ -4282,7 +4469,7 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:price)</code>
+            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:last_name)</code>
           </li>
         </div>
       
@@ -4293,7 +4480,7 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:status)</code>
+            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:email)</code>
           </li>
         </div>
       
@@ -4304,7 +4491,7 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes][:first_name]).to be_a(String)</code>
+            <code class="ruby">      expect(customer[:data][:attributes]).to have_key(:subscriptions)</code>
           </li>
         </div>
       
@@ -4315,7 +4502,7 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes][:last_name]).to be_a(String)</code>
+            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:title)</code>
           </li>
         </div>
       
@@ -4326,7 +4513,7 @@
 
             
 
-            <code class="ruby">      expect(customer[:data][:attributes][:email]).to be_a(String)</code>
+            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:price)</code>
           </li>
         </div>
       
@@ -4337,12 +4524,89 @@
 
             
 
+            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:status)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(customer[:data][:attributes][:first_name]).to be_a(String)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="35">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(customer[:data][:attributes][:last_name]).to be_a(String)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="36">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(customer[:data][:attributes][:email]).to be_a(String)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(customer[:data][:attributes][:subscriptions]).to be_an(Array)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0][:title]).to eq(&#39;Summer Mellow&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0][:price]).to eq(4.99)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(customer[:data][:attributes][:subscriptions][0][:status]).to eq(&quot;true&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -4353,7 +4617,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -4364,7 +4628,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
