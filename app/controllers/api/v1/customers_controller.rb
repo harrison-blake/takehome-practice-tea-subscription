@@ -14,9 +14,6 @@ class Api::V1::CustomersController < ApplicationController
     rescue StandardError => e
       render json: {error: "id does not exist"}, status: 404
     end
-
-
-
   end
 
   def update
@@ -24,7 +21,6 @@ class Api::V1::CustomersController < ApplicationController
     sub = customer.subscriptions.find(params[:subscription_id])
     sub.status = false
     sub.save
-
     render json: CustomerSerializer.new(customer)
   end
 end
