@@ -1,3 +1,4 @@
+
 # Tea Subscriptions
 
 ## Versions
@@ -7,7 +8,7 @@
 - Bundler 2.1.4
 
 ## Database Schema
-<img width="1137" alt="Screen Shot 2021-07-28 at 9 50 00 AM" src="https://user-images.githubusercontent.com/72946334/127354728-52b70cfb-ced1-41a9-bcfa-3b0313ee2294.png">
+<img width="1164" alt="Screen Shot 2021-07-28 at 9 57 36 AM" src="https://user-images.githubusercontent.com/72946334/127355925-959aed7e-c724-46d9-86cb-6b17493155f2.png">
 
 ## API Endpoint Examples
 
