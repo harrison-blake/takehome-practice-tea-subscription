@@ -21,17 +21,17 @@ describe 'Create Subscription Endpoint' do
         post '/api/v1/subscriptions', headers: headers, params: params.to_json
       end
 
-      customer = JSON.parse(response.body, symbolize_names: true)
+      subscription = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_success
 
-      expect(customer[:data][:attributes]).to have_key(:title)
-      expect(customer[:data][:attributes]).to have_key(:price)
-      expect(customer[:data][:attributes]).to have_key(:status)
-      expect(customer[:data][:attributes]).to have_key(:teas)
-      expect(customer[:data][:attributes][:title]).to be_a(String)
-      expect(customer[:data][:attributes][:price]).to be_a(Float)
-      expect(customer[:data][:attributes][:teas]).to be_an(Array)
+      expect(subscription[:data][:attributes]).to have_key(:title)
+      expect(subscription[:data][:attributes]).to have_key(:price)
+      expect(subscription[:data][:attributes]).to have_key(:status)
+      expect(subscription[:data][:attributes]).to have_key(:teas)
+      expect(subscription[:data][:attributes][:title]).to be_a(String)
+      expect(subscription[:data][:attributes][:price]).to be_a(Float)
+      expect(subscription[:data][:attributes][:teas]).to be_an(Array)
     end
   end
 end

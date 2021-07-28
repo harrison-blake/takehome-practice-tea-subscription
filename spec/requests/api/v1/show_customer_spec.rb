@@ -4,17 +4,31 @@ describe 'Show Customer Endpoint' do
   describe 'Happy Path' do
     before :each do
       @customer = Customer.create!(first_name: 'Harrison', last_name: 'Blake', email: 'test')
-      @test_sub = Subscription.create!(title: 'Summer Mellow', price: 4.99, status: false)
-      @test_sub.teas.create!(title: 'Green Tea', description: 'Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.', brew_time: 10.30)
-      @test_sub.teas.create!(title: 'Mint Tea', description: 'Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.', brew_time: 10.30)
+      @customer.subscriptions.create!(title: 'Summer Mellow', price: 4.99, status: false)
+      @customer.subscriptions.first.teas.create!(title: 'Green Tea', description: 'Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.', brew_time: 10.30)
+      @customer.subscriptions.first.teas.create!(title: 'Mint Tea', description: 'Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.', brew_time: 10.30)
     end
 
-    it "shows all customers active and inactive subscriptions" do
+    it "shows all customer's active and inactive subscriptions" do
       VCR.use_cassette('add_users_roomie_requests') do
         get "/api/v1/customers/#{@customer.id}"
       end
 
       expect(response).to be_success
+
+      customer = JSON.parse(response.body, symbolize_names: true)
+
+      expect(customer[:data][:attributes]).to have_key(:first_name)
+      expect(customer[:data][:attributes]).to have_key(:last_name)
+      expect(customer[:data][:attributes]).to have_key(:email)
+      expect(customer[:data][:attributes]).to have_key(:subscriptions)
+      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:title)
+      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:price)
+      expect(customer[:data][:attributes][:subscriptions][0]).to have_key(:status)
+      expect(customer[:data][:attributes][:first_name]).to be_a(String)
+      expect(customer[:data][:attributes][:last_name]).to be_a(String)
+      expect(customer[:data][:attributes][:email]).to be_a(String)
+      expect(customer[:data][:attributes][:subscriptions]).to be_an(Array)
     end
   end
 end

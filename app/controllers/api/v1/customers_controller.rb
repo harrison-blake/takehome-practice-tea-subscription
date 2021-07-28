@@ -1,5 +1,6 @@
 class Api::V1::CustomersController < ApplicationController
   def show
-    # render json: CustomerSerializer.new(customer)
+    customer = Customer.find(params[:id])
+    render json: CustomerSerializer.new(customer)
   end
 end
