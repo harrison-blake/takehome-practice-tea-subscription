@@ -17,11 +17,13 @@ Endpoint: http://localhost:3000/api/v1/customers
 
 Verb: POST
 
+Body:
+
 ```
-Body: {
-         "customer_id": 4,
-         "subscription_id": 4
-      }
+{
+    "customer_id": 4,
+    "subscription_id": 4
+}
 ```
 
 Sample Data Returned:
@@ -57,6 +59,16 @@ Sample Data Returned:
 Endpoint: http://localhost:3000/api/v1/customers
 
 Verb: PUT
+
+Body: 
+
+```
+{
+    subscription_id: @test_sub.id
+}
+```
+
+Sample Data Returned:
 
 ```
 {
