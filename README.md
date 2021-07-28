@@ -1,8 +1,5 @@
 # Tea Subscriptions
 
-## Overview
-- todo
-
 ## Versions
 
 - Rails 5.2.5
