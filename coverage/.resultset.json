@@ -1,14 +1,32 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/spec/models/customer_spec.rb": {
+      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/spec/requests/api/v1/create_subscription_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          2,
-          2,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
           null,
           null
         ]
@@ -287,7 +305,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -299,6 +317,10 @@
       "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/config/routes.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -318,34 +340,11 @@
           null
         ]
       },
-      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/spec/models/subscription_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
       "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/app/models/subscription.rb": {
         "lines": [
           1,
           1,
           1,
-          null
-        ]
-      },
-      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/spec/models/tea_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
           null
         ]
       },
@@ -355,8 +354,23 @@
           1,
           null
         ]
+      },
+      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/app/controllers/api/v1/subscriptions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1627433802
+    "timestamp": 1627445687
   }
 }
