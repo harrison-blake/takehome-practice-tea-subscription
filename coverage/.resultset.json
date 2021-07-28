@@ -11,21 +11,31 @@
           1,
           1,
           1,
-          null,
-          null,
-          1,
           1,
           null,
-          null,
-          null,
-          null,
-          1,
           null,
           1,
           1,
           null,
           null,
+          null,
+          null,
           1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
           null,
           null,
           null
@@ -359,7 +369,12 @@
         "lines": [
           1,
           1,
+          1,
+          1,
+          1,
+          1,
           null,
+          1,
           null,
           null
         ]
@@ -369,8 +384,18 @@
           1,
           null
         ]
+      },
+      "/Users/harrison/turing/mod4/projects/tea-takehome/tea-sub/app/serializers/subscription_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1627445687
+    "timestamp": 1627474659
   }
 }
