@@ -5,12 +5,18 @@ class Api::V1::CustomersController < ApplicationController
   end
 
   def create
-    sub = Subscription.find(params[:subscription_id])
-    sub.status = true
-    customer = Customer.find(params[:customer_id])
-    customer.subscriptions << sub
+    begin
+      customer = Customer.find(params[:customer_id])
+      sub = Subscription.find(params[:subscription_id])
+      sub.status = true
+      customer.subscriptions << sub
+      render json: CustomerSerializer.new(customer)
+    rescue StandardError => e
+      render json: {error: "id does not exist"}, status: 404
+    end
 
-    render json: CustomerSerializer.new(customer)
+
+
   end
 
   def update
@@ -18,6 +24,7 @@ class Api::V1::CustomersController < ApplicationController
     sub = customer.subscriptions.find(params[:subscription_id])
     sub.status = false
     sub.save
+
     render json: CustomerSerializer.new(customer)
   end
 end

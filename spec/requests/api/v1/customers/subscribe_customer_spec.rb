@@ -39,5 +39,23 @@ describe 'Subscribe Customer Endpoint' do
       expect(customer[:data][:attributes][:subscriptions][0][:price]).to eq(4.99)
       expect(customer[:data][:attributes][:subscriptions][0][:status]).to eq("true")
     end
+
+    it "returns an error message if the subscription id does not exist" do
+      params = {
+                customer_id: @customer.id,
+                subscription_id: 1
+               }
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      VCR.use_cassette('subscribe_customer') do
+        post '/api/v1/customers', headers: headers, params: params.to_json
+      end
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(error).to have_key(:error)
+      expect(error[:error]).to eq("id does not exist")
+    end
   end
 end
