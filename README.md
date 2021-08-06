@@ -30,32 +30,27 @@ Body:
 
 ```
 {
-    "customer_id": 4,
-    "subscription_id": 4
-}
-```
-
-Sample Data Returned:
-
-```
-{
     "data": {
-        "id": "4",
-        "type": "customer",
+        "id": "1",
+        "type": "subscription",
         "attributes": {
-            "id": 4,
-            "first_name": "Harrison",
-            "last_name": "Blake",
-            "email": "test",
-            "subscriptions": [
+            "id": 1,
+            "title": "Summer Mellow",
+            "price": 4.99,
+            "teas": [
                 {
-                    "status": "true",
-                    "customer_id": 4,
-                    "id": 4,
-                    "title": "Summer Mellow",
-                    "price": 4.99,
-                    "created_at": "2021-07-28T12:23:14.575Z",
-                    "updated_at": "2021-07-28T14:43:41.356Z"
+                    "id": 1,
+                    "title": "Green Tea",
+                    "description": "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.",
+                    "brew_time": 10.3,
+                    "subscription_id": 1
+                },
+                {
+                    "id": 2,
+                    "title": "Mint Tea",
+                    "description": "Mint tea is an herbal tea that is appreciated around the world for its fresh aroma and soothing taste. Mint tea benefits are widely promoted, but not all of them are supported by scientific studies. Other types of mint tea—such as Skinny Mint Tea—have become popular based, in part, on the benefits of mint tea.",
+                    "brew_time": 10.3,
+                    "subscription_id": 1
                 }
             ]
         }
@@ -80,29 +75,7 @@ Body:
 Sample Data Returned:
 
 ```
-{
-    "data": {
-        "id": "4",
-        "type": "customer",
-        "attributes": {
-            "id": 4,
-            "first_name": "Harrison",
-            "last_name": "Blake",
-            "email": "test",
-            "subscriptions": [
-                {
-                    "id": 4,
-                    "title": "Summer Mellow",
-                    "price": 4.99,
-                    "created_at": "2021-07-28T12:23:14.575Z",
-                    "updated_at": "2021-07-28T14:47:01.179Z",
-                    "customer_id": 4,
-                    "status": "false"
-                }
-            ]
-        }
-    }
-}
+204 no content http status with no body returned
 ```
 
 #### Get Customer Information
